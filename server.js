@@ -5,6 +5,9 @@ const app = express();
 require('./configs/');
 
 
+// logs HTTP requests
+app.use(require('morgan')('dev'))
+
 // use routes
 app.use(require('./routers/routes'));
 
